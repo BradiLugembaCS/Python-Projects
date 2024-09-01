@@ -30,6 +30,9 @@ for nation in countries:
         try:
             isNumber = True
             ans = int(input("\nOption: "))
+            if ans < 1 or ans > 3:
+                isNumber = False
+                print("Please enter a number between 1 and 3")
         except ValueError:
             print("Please enter a number between 1 and 3")
             isNumber = False
