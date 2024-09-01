@@ -12,5 +12,13 @@ countries = [
 ]
 
 
+ansNumber = 1
+
 for nation in countries:
     print(f"What is the capital of {nation['country']}?:")
+
+    for city in nation['cities']:
+        print(f"Option {ansNumber}: {city}")
+        ansNumber += 1
+    
+    ansNumber = 1
