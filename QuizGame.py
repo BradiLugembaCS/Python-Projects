@@ -22,3 +22,5 @@ for nation in countries:
         ansNumber += 1
     
     ansNumber = 1
+
+    print("\n")
