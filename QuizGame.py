@@ -18,15 +18,24 @@ indexNum = 0
 score = 0
 
 for nation in countries:
+    isNumber = False
+
     print(f"What is the capital of {nation['country']}?:")
 
     for city in nation['cities']:
         print(f"Option {ansNumber}: {city}")
         ansNumber += 1
 
-    ans = int(input("\nOption: "))
+    while isNumber == False:
+        try:
+            isNumber = True
+            ans = int(input("\nOption: "))
+        except ValueError:
+            print("Please enter a number between 1 and 3")
+            isNumber = False
+
     if ans == correctAns[indexNum]:
-        score +=1
+        score += 1
     
     indexNum +=1
     ansNumber = 1
