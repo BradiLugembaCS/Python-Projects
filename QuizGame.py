@@ -11,8 +11,11 @@ countries = [
     {"country": "South Africa", "cities": ["Cape Town", "Johannesburg", "Pretoria"]}
 ]
 
+correctAns = [2,1,3,2,3,3,1,2,2,1]
 
 ansNumber = 1
+indexNum = 0
+score = 0
 
 for nation in countries:
     print(f"What is the capital of {nation['country']}?:")
@@ -20,7 +23,13 @@ for nation in countries:
     for city in nation['cities']:
         print(f"Option {ansNumber}: {city}")
         ansNumber += 1
-    
-    ansNumber = 1
 
+    ans = int(input("\nOption: "))
+    if ans == correctAns[indexNum]:
+        score +=1
+    
+    indexNum +=1
+    ansNumber = 1
     print("\n")
+
+print(f"Score:{score}/10")
