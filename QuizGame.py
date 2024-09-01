@@ -10,3 +10,7 @@ countries = [
     {"country": "Italy", "cities": ["Venice", "Rome", "Milan"]},
     {"country": "South Africa", "cities": ["Cape Town", "Johannesburg", "Pretoria"]}
 ]
+
+
+for nation in countries:
+    print(f"What is the capital of {nation['country']}?:")
